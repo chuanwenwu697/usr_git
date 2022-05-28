@@ -1,0 +1,67 @@
+一．本地库初始化
+	切换到工作目录
+	git init
+	结果：生成一个.git文件夹，其存放着本地库相关的子目录和文件，不要删除，也不要胡乱修改
+
+二．设置签名
+	形式：
+		用户名：chuanwen
+		Email地址：chuanwenwu697@gmail.com	
+	作用：
+		区分不同开发人员的身份，签名与远程代码库（代码托管中心）的帐号密码没有关系
+	命令：
+		项目级别：仅在当前本地库范围有效
+			git config user.name chuanwen_pro
+			git config user.email chuanwenwu697@gmail.com
+			信息保存位置：./.git/config
+		系统用户级别：登录当前操作系统的用户范围
+			git config --global user.name chuanwen_glb
+			git config --global user.email chuanwenwu697@gmail.com
+			信息保存位置：~/.gitconfig文件
+三．git添加提交及状态查看
+	添加提交：
+		git add [filename]
+		git commit [filename] -m "文件（修改）描述"
+	状态查看：
+		git status
+四．git查看历史记录
+	git log --pretty=oneline(或者--oneline)
+	git reflog
+五．git前进后退历史版本
+	git reset --hard [索引号]　（git reflog）
+	git reset --hard HEAD^ (往后退一步，n^符号退n步)
+	git reset --hard HEAD~3(后退三步)
+	参数：--soft
+		仅仅在本地库移动HEAD指针
+	参数：--mixed
+		在本地库移动指针
+		重置暂存区
+	参数：--hard
+		在本地库移动HEAD指针
+		重置暂存区
+		重置工作区
+六．git永久删除后找回
+	1) rm [filename]
+	2) git add [filename]
+	3) git commit [filename] -m "说明"
+
+	4) git reflog
+	5) git reset --hard [索引号] 
+七．比较文件
+	git diff [filename]        在工作区和缓存区进行文件比较
+	git diff HEAD [filename]   在工作区和本地库进行文件比较
+八．分支操作
+	1)创建分支　git branch [分支名]
+	1)删除分支　git branch -d [分支名]
+	2)查看分支　git branch -v
+	3)切换分支　git checkout [分支名]
+九．合并分支
+	第一步：切换到接受修改的分支上（被合并，增加新内容）
+		git checkout [分支名]
+	第二步：执行merge命令
+		git merge [分支名]
+十．解决合并分支后产生的冲突
+	原因：同时修改合并和被合并的分支，导致系统不知道听从哪个文件
+	第一步：编辑修改文件，删除特殊符号，直到满意退出
+	第二步：git add [文件名]
+	第三步：git commit -m "日志信息"．注意此时commit不能带具体的文件名
