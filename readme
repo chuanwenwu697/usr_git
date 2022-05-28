@@ -65,3 +65,10 @@
 	第一步：编辑修改文件，删除特殊符号，直到满意退出
 	第二步：git add [文件名]
 	第三步：git commit -m "日志信息"．注意此时commit不能带具体的文件名
+十一．创建本地库 创建远程库 远程库别名设置
+	创建本地库：　　git init
+	创建远程库：　　在github中点击右上角new repository，设置远程库的名称
+	远程库别名设置：git remote add usr_git https://github.com/chuanwenwu697/usr_git.git
+	查看：　　　　　git remote -v
+十二．推送(从本地库推送到远程库当中)
+	git push usr_git master
