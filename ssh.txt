@@ -1,0 +1,10 @@
+1.删除已经存在的ssh
+	rm -r .ssh/
+2.创建新的.shh文件夹,产生id_rsa与id_rsa.pub两个文件
+	ssh-keygen -t rsa -C [邮箱]
+3.登录github帐号，赋值粘贴id_rsa.pub文件里的内容
+	[Settings]-[SSH and GPG keys]-[New SSH key]
+4.新建远程地址的别名
+	git remote add usrgit_ssh git@github.com:chuanwenwu697/usr_git.git
+5.推送到远程库
+	git push usrgit_ssh master
