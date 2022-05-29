@@ -8,3 +8,6 @@
 	git remote add usrgit_ssh git@github.com:chuanwenwu697/usr_git.git
 5.推送到远程库
 	git push usrgit_ssh master
+6.添加专用密钥
+	eval "$(ssh-agent -s)"
+	ssh-add
