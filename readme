@@ -70,6 +70,7 @@
 	创建远程库：　　在github中点击右上角new repository，设置远程库的名称
 	远程库别名设置：git remote add usr_git https://github.com/chuanwenwu697/usr_git.git
 	查看：　　　　　git remote -v
+	删除远程仓库　　git remote rm [仓库名]
 十二．推送(从本地库推送到远程库当中)
 	git push usr_git master
 十三．克隆
