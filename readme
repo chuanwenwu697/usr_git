@@ -72,3 +72,7 @@
 	查看：　　　　　git remote -v
 十二．推送(从本地库推送到远程库当中)
 	git push usr_git master
+十三．克隆
+	全克隆：　git clone　https://github.com/chuanwenwu697/usr_git.git
+ 	克隆某个分支：git clone -b [分支名]　--single-branch　https://github.com/chuanwenwu697/usr_git.git
+
